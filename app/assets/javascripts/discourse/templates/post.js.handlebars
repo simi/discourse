@@ -27,6 +27,7 @@
     <div class='topic-meta-data span2'>
       <div {{bindAttr class=":contents byTopicCreator:topic-creator"}}>
         <a href='{{unbound usernameUrl}}'>{{avatar this imageSize="large"}}</a>
+        {{#if color}}<div class="highlight" style="color: {{unbound color}}">{{group_name}}</div>{{/if}}
         <h3 {{bindAttr class="staff new_user"}}><a href='{{unbound usernameUrl}}'>{{breakUp username}}</a></h3>
         {{#if user_title}}<div class="user-title">{{user_title}}</div>{{/if}}
       </div>

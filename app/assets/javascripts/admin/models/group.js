@@ -70,7 +70,8 @@ Discourse.Group = Discourse.Model.extend({
       data: {
         group: {
           name: this.get('name'),
-          usernames: this.get('usernames')
+          usernames: this.get('usernames'),
+          color: this.get('color')
         }
       },
       complete: function(){

@@ -34,6 +34,8 @@ class PostSerializer < ApplicationSerializer
              :username,
              :name,
              :user_title,
+             :color,
+             :group_name,
              :reply_to_user,
              :bookmarked,
              :raw,
@@ -48,6 +50,13 @@ class PostSerializer < ApplicationSerializer
              :deleted_at,
              :trust_level
 
+  def group_name
+    "developer"
+  end
+
+  def color
+    "#006699"
+  end
 
   def moderator?
     object.user.moderator?

@@ -21,6 +21,7 @@ class Admin::GroupsController < Admin::AdminController
     else
       group.usernames = params[:group][:usernames]
       group.name = params[:group][:name] if params[:group][:name]
+      group.color = params[:group][:color] if params[:group][:color]
       if group.save
         render json: "ok"
       else
